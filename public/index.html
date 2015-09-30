@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Patrick Hindmarsh &bull; Web Developer in Wellington, NZ</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-34801840-1']);
+	  _gaq.push(['_setDomainName', 'hindmar.sh']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+  </head>
+  <body onload="init()">
+    <div id="map_canvas"></div>
+
+    <div id="profile" class="well clearfix">
+    	<img src="http://graph.facebook.com/521016333/picture" width="50" height="50" />
+
+    	<h2>Patrick Hindmarsh</h2>
+
+    	<h6>Software Engineer <small>in Wellington, NZ</small></h6>
+
+    	<p>
+	    	<script type="text/javascript">
+			    (function(d, w){ d[w]('<a href="'+'mai'+'lto:patri'+('ffvyw'=='dsads'||'ck@h')+'indmar'+'.sh">pat'+('rrr'=='rrr'&&'rick')+'@hind'+('dsd'=='sa'||'mar.sh')+'</a>'); })(document, 'write');
+			</script>
+    	</p>
+    	<p>+64 21 903 591</p>
+
+      <ul id="social">
+    		<li><a href="http://twitter.com/phindmarsh">@phindmarsh</a></li>
+        <li><a href="http://fb.me/phindmarsh">fb.me/phindmarsh</a></li>
+	    	<li><a href="http://nz.linkedin.com/in/phindmarsh">linkd.in/phindmarsh</a></li>
+        <li><a href="http://github.com/phindmarsh">github.com/phindmarsh</a></li>
+    	</ul>
+
+
+    </div>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+      function init() {
+       	var center = new google.maps.LatLng(-41.286427, 174.796245),
+        	map = new google.maps.Map(document.getElementById("map_canvas"), {
+	        	center: center, zoom: 14, mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true,
+            styles: [{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"off"}]},
+                {"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},
+                {"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"on"}]},
+                {"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"on"}]},
+                {"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"off"}]},
+                {"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},
+                {"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"off"}]},
+                {"featureType":"transit.line","elementType":"all","stylers":[{"visibility":"off"}]},
+                {"featureType":"poi.school","elementType":"labels","stylers":[{"visibility":"off"}]},
+                {"featureType":"poi.medical","elementType":"labels","stylers":[{"visibility":"off"}]},
+                {"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"off"}]}]
+	        }),
+	        timeout;
+        google.maps.event.addListener(map, 'resize', function(){ map.panTo(center); });
+        window.onresize = function(){
+	        clearTimeout(timeout);
+	        timeout = setTimeout(function(){ google.maps.event.trigger(map, 'resize'); }, 300);
+        }
+      }
+    </script>
+  </body>
+</html>
